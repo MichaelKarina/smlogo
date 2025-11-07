@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+  .logo-slider {
+    overflow: hidden;
+    background: #fff;
+    padding: 20px 0;
+    position: relative;
+  }
+
+  .logo-track {
+    display: flex;
+    gap: 50px;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+  }
+
+  .logo-track::after {
+    content: "";
+    display: flex;
+    width: 100%;
+  }
+
+  .logo-slider img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-slider img:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-slider img {
+      height: 45px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="logo-slider">
+  <div class="logo-track">
+    <img src="kebs.png" alt="KEBS">
+    <img src="delivery.png" alt="Delivery">
+    <img src="mik.png" alt="MIK">
+    <img src="waranty.png" alt="Warranty">
+  </div>
+</div>
+
+</body>
+</html>
